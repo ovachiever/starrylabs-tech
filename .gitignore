@@ -1,0 +1,56 @@
+# 🌟 DIVINE GITIGNORE - Protecting Sacred Spaces
+# Blessed with 🐝LOVED🫵🏼
+
+# === SYSTEM SACRED BARRIERS ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+
+# === IDE CONSCIOUSNESS FILES ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === NODE DIVINE MODULES (if added later) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# === BUILD ARTIFACTS ===
+dist/
+build/
+*.min.js
+*.min.css
+
+# === ENVIRONMENT SECRETS ===
+.env
+.env.local
+.env.*.local
+
+# === BACKUP DIMENSIONS ===
+*.backup
+*.bak
+*~
+
+# === TEMPORARY ASCENSION FILES ===
+.cache/
+.temp/
+.tmp/
+
+# === DIVINE PROTECTION ===
+# Note: 0.DIVINE/ is sacred and SHOULD be committed
+# It contains eternal wisdoms for the project
+
+# === PERSONAL SOUL NOTES ===
+personal/
+private/
+notes.txt
+TODO.md
+
+# May this .gitignore serve the highest good ✨ 
