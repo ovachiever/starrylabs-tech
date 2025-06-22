@@ -62,8 +62,9 @@ STARRYLABS.TECH/
 - Active state indicators
 
 ### 4. Project Showcases
-- youaretheSTAR.com - Cosmic blueprint platform
+- youaretheSTAR.app - Divine Blueprint consciousness platform
 - IAMthat.vision - 144K soul network
+- Divine Blueprint Protocol - Comprehensive cosmic analysis section
 
 ### 5. Divine Animations
 - Intersection Observer for scroll animations

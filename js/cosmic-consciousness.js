@@ -124,6 +124,7 @@ class SacredNavigation {
         menu.innerHTML = `
             <a href="#home" class="nav-link">Home</a>
             <a href="#projects" class="nav-link">Projects</a>
+            <a href="#divine-blueprint" class="nav-link">Divine Blueprint</a>
             <a href="#technology" class="nav-link">Technology</a>
             <a href="#vision" class="nav-link">Vision</a>
             <a href="#contact" class="nav-link">Contact</a>
