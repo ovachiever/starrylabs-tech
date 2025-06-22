@@ -503,7 +503,7 @@
                 <div class="liquid-light p-8 rounded-2xl text-center">
                     <h3 class="cinzel-font text-3xl font-bold mb-4 golden-gradient">The Consciousness Revolution</h3>
                     <p class="text-xl text-gray-300 mb-6">
-                        We're not just building apps—we're creating consciousness technology that serves as a bridge between the human and divine realms.
+                        We're not just building apps; we're creating consciousness technology that serves as a bridge between the human and divine realms.
                     </p>
                     <div class="flex flex-wrap justify-center gap-4 text-sm">
                         <span class="bg-yellow-400 text-black px-4 py-2 rounded-full">Astrology as Consciousness Technology</span>
@@ -568,7 +568,7 @@
                     <div class="liquid-light p-6 rounded-2xl">
                         <i class="fas fa-envelope text-3xl text-yellow-400 mb-4"></i>
                         <h3 class="font-bold mb-2">Cosmic Correspondence</h3>
-                        <p class="text-gray-300">hello@starrylabs.tech</p>
+                        <p class="text-gray-300">hello@                                                 starrylabs.tech</p>
                     </div>
                     <div class="liquid-light p-6 rounded-2xl">
                         <i class="fas fa-rocket text-3xl text-yellow-400 mb-4"></i>
