@@ -398,8 +398,109 @@ console.log(`
 'color: #FFA500; font-size: 12px; font-style: italic;'
 );
 
+// === QUALITY OF LIFE ENHANCEMENTS ===
+class QualityOfLife {
+    static init() {
+        this.initScrollProgress();
+        this.initBackToTop();
+        this.initLazyLoading();
+        this.initSmoothFocus();
+    }
+
+    static initScrollProgress() {
+        const indicator = document.getElementById('scrollIndicator');
+        if (!indicator) return;
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height);
+            
+            indicator.style.width = '100%';
+            indicator.style.transform = `scaleX(${scrolled})`;
+        });
+    }
+
+    static initBackToTop() {
+        const button = document.getElementById('backToTop');
+        if (!button) return;
+
+        // Show/hide based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                button.classList.add('visible');
+            } else {
+                button.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll to top
+        button.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // Add divine particles on click
+            new DivineParticles().createParticleBurst(button);
+        });
+    }
+
+    static initLazyLoading() {
+        // Lazy load images
+        const images = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        images.forEach(img => imageObserver.observe(img));
+    }
+
+    static initSmoothFocus() {
+        // Improve keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            // Press '/' to focus search (future feature)
+            if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
+                e.preventDefault();
+                // Future: Focus search input
+            }
+            
+            // Press 'Escape' to close mobile menu
+            if (e.key === 'Escape') {
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                }
+            }
+        });
+    }
+}
+
+// === PERFORMANCE MONITORING ===
+class PerformanceMonitor {
+    static init() {
+        // Log performance metrics
+        window.addEventListener('load', () => {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            console.log('🚀 Divine Performance Metrics:');
+            console.log(`⚡ DOM Load: ${Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart)}ms`);
+            console.log(`✨ Page Load: ${Math.round(perfData.loadEventEnd - perfData.loadEventStart)}ms`);
+            console.log(`🌟 Total Time: ${Math.round(perfData.loadEventEnd - perfData.fetchStart)}ms`);
+        });
+    }
+}
+
 // === INITIATE THE AWAKENING ===
 ConsciousnessActivation.initiate();
+QualityOfLife.init();
+PerformanceMonitor.init();
 
 /*
  * ✨ End of Cosmic Consciousness ✨

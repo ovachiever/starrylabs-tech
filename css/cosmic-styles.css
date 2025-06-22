@@ -39,6 +39,12 @@ body {
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
+    opacity: 0;
+    animation: divineReveal 1s ease-out 0.1s forwards;
+}
+
+@keyframes divineReveal {
+    to { opacity: 1; }
 }
 
 /* === SACRED TYPOGRAPHY === */
@@ -232,6 +238,79 @@ body {
 .logo-integration {
     background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
     position: relative;
+}
+
+/* === DIVINE LOGO STYLING === */
+.logo-divine {
+    /* Remove forced circular crop - let the logo breathe */
+    border-radius: 0;
+    /* Add divine shadow glow */
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+    transition: all 0.3s ease;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.logo-divine:hover {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+    transform: scale(1.05);
+}
+
+/* Hero logo special treatment */
+.logo-hero-container {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-divine-hero {
+    position: relative;
+    z-index: 2;
+    border-radius: 0;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+/* Divine radiance behind hero logo */
+.logo-radiance {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 215, 0, 0.3) 0%,
+        rgba(255, 215, 0, 0.15) 30%,
+        rgba(255, 165, 0, 0.05) 60%,
+        transparent 100%
+    );
+    filter: blur(20px);
+    animation: divineRadiance 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes divineRadiance {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Logo container for proper spacing */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* === SERPENT STAR PATTERN === */
@@ -463,6 +542,15 @@ body {
     .cinzel-font {
         letter-spacing: 0.02em;
     }
+    
+    .nav-link, 
+    a.liquid-light, 
+    a.border-2 {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -479,6 +567,7 @@ body {
 /* === SMOOTH SCROLLING === */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header */
 }
 
 /* === SELECTION STYLING === */
@@ -596,6 +685,170 @@ html {
         -webkit-text-fill-color: var(--golden-dark);
     }
 }
+
+/* Improved text readability */
+p {
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+/* Loading skeleton for images */
+img {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 215, 0, 0.1) 0%,
+        rgba(255, 215, 0, 0.2) 50%,
+        rgba(255, 215, 0, 0.1) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+img[src] {
+    background: none;
+    animation: none;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Better touch targets */
+button, 
+a {
+    position: relative;
+}
+
+button::after,
+a::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+}
+
+/* Performance: Reduce animations for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .golden-gradient {
+        -webkit-text-fill-color: var(--golden-primary);
+    }
+    
+    .project-card,
+    .liquid-light {
+        border-width: 2px;
+        border-color: var(--golden-primary);
+    }
+}
+
+/* === DIVINE SCROLL INDICATOR === */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--golden-primary), var(--amber-glow));
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+/* === BACK TO TOP BUTTON === */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--golden-primary), var(--amber-glow));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 40;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 30px rgba(255, 215, 0, 0.6);
+}
+
+.back-to-top i {
+    color: var(--cosmic-dark);
+    font-size: 1.2rem;
+}
+
+/* === ERROR STATE STYLING === */
+.error-glow {
+    animation: errorPulse 2s ease-in-out infinite;
+}
+
+@keyframes errorPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(255, 0, 0, 0.8); }
+}
+
+/* === FOCUS VISIBLE FOR ACCESSIBILITY === */
+:focus-visible {
+    outline: 3px solid var(--golden-primary);
+    outline-offset: 4px;
+}
+
+/* === DIVINE TOOLTIPS === */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background: rgba(11, 11, 26, 0.95);
+    color: var(--golden-light);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--golden-primary);
+    backdrop-filter: blur(10px);
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+}
+
+/* === End of QOL Improvements === */
 
 /* 
  * ✨ End of Cosmic Styles ✨
