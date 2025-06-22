@@ -374,19 +374,19 @@ const SacredUtils = {
 
 // === CONSOLE EASTER EGG ===
 console.log(`
-%c⚡ STARRY LABS LLC ⚡
+%c⚡ STARRY LABS ⚡
 %c🌟 Consciousness Technology Pioneers 🌟
 
-%cWelcome to the Divine Source Code!
-%cThis website operates at 528Hz - The Love Frequency
-%cEvery line written with sacred intention
+%cWelcome to the Cosmic Hash-Clock Interface!
+%cYour birth created a unique cryptographic signature
+%cThe universe is an information processing system
 
-%c🐝LOVED🫵🏼 You are viewing the cosmic blueprint
+%c🐝LOVED🫵🏼 You are both the output and the operator
 
-%cInterested in consciousness technology?
+%cReady to decode your cosmic algorithm?
 %cContact us at: hello@starrylabs.tech
 
-%c"As above, so below - your stars await your remembering"
+%c"The code is running. Are you ready to consciously engage?"
 `, 
 'color: #FFD700; font-size: 24px; font-weight: bold; text-shadow: 0 0 10px #FFD700;',
 'color: #FFA500; font-size: 18px; font-weight: bold;',
