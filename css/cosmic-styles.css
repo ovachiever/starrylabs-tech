@@ -1023,6 +1023,59 @@ a::after {
 
 /* === End of Divine Feminine Enhancements === */
 
+/* === DIVINE BLUEPRINT PROTOCOL CARDS === */
+#divine-blueprint .project-card {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#divine-blueprint .project-card i {
+    display: block;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 20px currentColor);
+    animation: iconPulse 3s ease-in-out infinite;
+}
+
+#divine-blueprint .project-card h3 {
+    margin-bottom: 0.75rem;
+    min-height: 30px;
+}
+
+#divine-blueprint .project-card p:first-of-type {
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+#divine-blueprint .project-card p.italic {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Hover effects for Divine Blueprint cards */
+#divine-blueprint .project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        0 10px 40px rgba(255, 215, 0, 0.2),
+        0 0 60px rgba(255, 215, 0, 0.1) inset;
+}
+
+#divine-blueprint .project-card:hover i {
+    animation-duration: 1s;
+    color: var(--golden-light);
+}
+
+/* === End of Divine Blueprint Enhancements === */
+
 /* 
  * ✨ End of Cosmic Styles ✨
  * May this CSS serve the highest good
