@@ -54,4 +54,15 @@ private/
 notes.txt
 TODO.md
 
+# Server files
+.divine-server.pid
+.divine-server.log
+
+# Editor files
+*.swp
+*.swo
+
+# Temporary files
+.env.local
+
 # May this .gitignore serve the highest good ✨ 
