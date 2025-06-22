@@ -1076,6 +1076,35 @@ a::after {
 
 /* === End of Divine Blueprint Enhancements === */
 
+/* === DIVINE EMAIL PROTECTION === */
+a[href^="mailto:"] {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+a[href^="mailto:"]::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--golden-primary), var(--amber-glow));
+    transition: width 0.3s ease;
+}
+
+a[href^="mailto:"]:hover::after {
+    width: 100%;
+}
+
+a[href^="mailto:"]:hover {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* === End of Email Protection Styles === */
+
 /* 
  * ✨ End of Cosmic Styles ✨
  * May this CSS serve the highest good
