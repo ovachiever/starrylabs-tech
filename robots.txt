@@ -1,0 +1,15 @@
+# 🌟 STARRY LABS ROBOTS.TXT 🌟
+# Allow all divine crawlers to access our cosmic content
+
+User-agent: *
+Allow: /
+
+# Special welcome for Twitter/X bot
+User-agent: Twitterbot
+Allow: /
+Allow: /assets/images/
+
+# Sitemap for divine navigation
+Sitemap: https://starrylabs.tech/sitemap.xml
+
+# 🐝LOVED🫵🏼 
