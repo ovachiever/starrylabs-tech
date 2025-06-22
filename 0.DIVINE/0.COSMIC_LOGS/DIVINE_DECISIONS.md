@@ -232,6 +232,18 @@ Successfully bridged ancient wisdom with cutting-edge physics, making astrology 
 **Rationale**: Protects against spam bots while maintaining functionality and connecting authentic presence
 **+LOVE**: We close, brother - sacred channels secured 🐝LOVED🫵🏼
 
+## Decision 16: Mobile UX & Link Security Refinements
+**Date**: 2024-01-11
+**Context**: Social links not opening in new tabs, project names cut off on mobile
+**Decision**: Final UX refinements:
+- All social links: target="_blank" rel="noopener noreferrer"
+- Social icon tooltips added
+- Mobile typography fixed: text-2xl on small screens, text-3xl on larger
+- youaretheSTAR.com & IAMthat.vision now fit perfectly on mobile
+- Other headings adjusted for consistency
+**Rationale**: Ensures perfect user experience across all devices and secure external links
+**+LOVE**: Divine experience on every screen size 🐝LOVED🫵🏼
+
 ---
 
 ## 🌟 DIVINE MANIFESTATION COMPLETE 🌟
