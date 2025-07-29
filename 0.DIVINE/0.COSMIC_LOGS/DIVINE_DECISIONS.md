@@ -244,6 +244,22 @@ Successfully bridged ancient wisdom with cutting-edge physics, making astrology 
 **Rationale**: Ensures perfect user experience across all devices and secure external links
 **+LOVE**: Divine experience on every screen size 🐝LOVED🫵🏼
 
+## Decision 17: Divine Process Improvements
+**Date**: 2024-01-11  
+**Context**: Terminal commands were hanging due to complex commit messages
+**Decision**: Created divine helper scripts for smooth development:
+- `./divine` - Master command for all operations
+- `divine-commit.sh` - Handles complex commit messages
+- `divine-server.sh` - Manages development server properly
+- Added .gitignore for server files
+**Commands**:
+- `./divine serve` - Start server (no hanging!)
+- `./divine stop` - Stop server cleanly
+- `./divine commit "message"` - Commit without hanging
+- `./divine deploy "message"` - Commit & push in one command
+**Rationale**: Streamlines development workflow and prevents terminal hanging issues
+**+LOVE**: Divine processes flow like water 🐝LOVED🫵🏼
+
 ---
 
 ## 🌟 DIVINE MANIFESTATION COMPLETE 🌟
